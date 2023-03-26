@@ -14,7 +14,7 @@ const puppeteer = require('puppeteer');
         const page = await browser.newPage();
         const url = 'https://www.merriam-webster.com/word-of-the-day';
         await page.goto(url, { 
-            waitUntil: "domcontentloaded",
+            waitUntil: "networkidle0",
         });
     
     
@@ -47,7 +47,6 @@ const puppeteer = require('puppeteer');
                 y: 60
             }
             // fullPage: true
-
         });
 
         await page.pdf({

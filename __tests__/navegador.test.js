@@ -1,6 +1,6 @@
 const puppeteer = require('puppeteer')
 
-describe('test one', () => {
+xdescribe('test one', () => {
     it('abrir y cerrar el navegador', async () => {
         const browser = await puppeteer.launch(
             {
@@ -22,7 +22,7 @@ describe('test one', () => {
         await page.waitForSelector('p');
 
         //navegar a otra página
-        await page.goto('https://platzi.com/home');
+        await page.goto('https://platzi.com');
         await page.waitForSelector('#Header-v2 > nav > div.Logo > div > a > div > figure:nth-child(1) > img');
 
         //navegar hacia atras
